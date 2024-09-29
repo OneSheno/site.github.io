@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: black;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9%;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #b74b4b;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 2.0rem;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #b74b4b;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #b74b4b;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.typing-text {
+    font-size: 3.4rem;
+    font-weight: 600;
+    min-width: 280px;
+    position: relative;
+}
+
+#dynamic-text::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    border-left: 3px solid #b74b4b;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    0%, 49% {
+        border-color: #b74b4b;
+    }
+    50%, 100% {
+        border-color: transparent;
+    }
+}
+
+
+@keyframes words {
+    0%, 20% {
+        content: "Seiri";
+    }
+    21%, 40% {
+        content: "Seiton";
+    }
+    41%, 60% {
+        content: "Seiso";
+    }
+    61%, 80% {
+        content: "Seiketsu";
+    }
+    81%, 100% {
+        content: "Shitsuke";
+    }
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+/* Adicionando Media Queries para telas menores */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2%;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+        margin-left: 2rem;
+    }
+
+    .home {
+        gap: 3rem;
+    }
+
+    .home .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .home-img img {
+        width: 60vw;
+        margin-top: 3rem;
+    }
+
+    .social-icons a {
+        margin: 2rem 1rem 2rem 0;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2.4rem;
+        font-size: 1.4rem;
+    }
+
+    .typing-text {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+    }
+
+    .home {
+        flex-direction: column;
+        padding: 2rem 5%;
+    }
+
+    .home .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
+    }
+
+    .home-img img {
+        width: 80vw;
+        margin-top: 2rem;
+    }
+
+    .social-icons a {
+        margin: 1.5rem 0.8rem 1.5rem 0;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .btn {
+        padding: 0.6rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .typing-text {
+        font-size: 2.8rem;
+    }
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Estilo para cabeçalhos h1 */
+h1 {
+    text-align: center;
+    text-justify: inter-word;
+}
+
+/* Centralizar e limitar a largura dos contêineres */
+div {
+    max-width: 1000px; /* Ajuste o valor conforme necessário */
+    margin: auto; /* Centraliza o contêiner */
+}
+
+/* Estilo para toda a barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+}
+
+/* Estilo para o trilho da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Cor do trilho */
+    border-radius: 10px; /* Bordas arredondadas no trilho */
+}
+
+/* Estilo para o polegar (a parte móvel da barra de rolagem) */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor do polegar */
+    border-radius: 10px; /* Bordas arredondadas no polegar */
+    border: 2px solid #1a1a1a; /* Espaçamento ao redor do polegar */
+}
+
+/* Estilo para quando o polegar é hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555555; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo para a barra de rolagem horizontal (opcional) */
+::-webkit-scrollbar-horizontal {
+    height: 8px; /* Altura da barra de rolagem horizontal */
+}
+
+/* Estilo da Seção de Educação */ 
+section.Educação {
+    color: rgb(255, 255, 255);
+    padding: 1rem 9%;
+}
+
+
+.Educação h5 {
+    font-size: 4rem;
+    font-weight: 10000;
+    margin-bottom: 2rem;
+}
+
+/* Estilo para o conteúdo do texto da Educação */
+.Educação p1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: none;
+}
+
+/* Estilo do texto principal */
+.Educação h5.typing-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+/* Estilo da Seção como um todo */
+.Educação {
+    text-align: justify;
+    max-width: 100%;
+    margin: none;
+}
+
+@media (max-width: 768px) {
+    .Educação {
+        padding: 2rem 5%;
+    }
+
+    .Educação h1 {
+        font-size: 2.5rem;
+    }
+
+    .Educação p1 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+}
+.logo img { /* tamanho da logo*/
+    width: 100px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    margin: 0 auto; /* Centraliza a imagem dentro do link, se necessário */
+    border-radius: 50%;
+}
+/* Estilo da Seção de Pratica */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 0px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0px;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    background: #222;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.goku-img img {
+    position: sticky;
+    top: 0; /* Para manter a imagem fixa ao rolar, se necessário */
+    right: 0; /* Move a imagem para o lado direito da tela */
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+    margin-left: 20%; /* Empurra para a direita dentro do contêiner */
+}
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .goku-img img {
+        width: 45vw; /* Aumenta o tamanho da imagem em telas menores */
+    }
+}
+
+/* Para telas menores que 480px (celulares menores) */
+@media (max-width: 480px) {
+    .goku-img img {
+        width: 60vw; /* Ajusta o tamanho da imagem para celulares menores */
+    }
+}
+
+/* Para telas muito pequenas (menores que 320px) */
+@media (max-width: 320px) {
+    .goku-img img {
+        width: 75vw; /* Tamanho da imagem em celulares muito pequenos */
+    }
+}
+/* Estilos do botão */
+.meu-botao {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.meu-botao:hover {
+    background-color: #45a049;
+}
+
+  

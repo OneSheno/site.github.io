@@ -47,5 +47,5 @@
 
   // Função para redirecionar o usuário ao clicar no botão
   document.getElementById("meuBotao").onclick = function() {
-      window.location.href = "continuacao.html"; // Substitua com o URL desejado
+      window.location.href = "o que é.html"; // Substitua com o URL desejado
   }

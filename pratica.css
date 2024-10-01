@@ -17,64 +17,103 @@ html {
 body {
     width: 100%;
     height: 100vh;
-    overflow-y: auto; /* Permite rolagem vertical */
+    overflow-y: auto;
     overflow-x: hidden;
     background-color: black;
     color: white;
 }
 
 header {
-    margin-top: 0px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
     background-color: black;
-    filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
+.logo {
+    font-size: 1.8rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
 .logo img {
-    width: 150px; /* Ajuste a largura conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Garante que a imagem seja tratada como um bloco */
-    margin: 15 auto; /* Centraliza a imagem dentro do link, se necessário */
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: auto;
     border-radius: 0%;
 }
 
+.logo:hover {
+    transform: scale(1.1);
+}
+
 nav {
-    display: flex; /* Use flexbox para a navegação */
+    display: flex;
 }
 
 nav a {
-    font-size: 1.8rem; /* Mantido em 1.2rem */
+    font-size: 1.8rem;
     color: white;
-    margin-left: 1rem; /* Mantenha a margem */
+    margin-left: 1rem;
     font-weight: 500;
     transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
 }
 
 section {
     min-height: 100vh;
-    padding: 10rem 9% 5rem; /* Espaço superior adicionado para evitar sobreposição */
+    padding: 10rem 9% 5rem;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    font-size: 4rem;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem; /* Adicionado para descer o h1 */
+}
+
+.description {
+    font-size: 2rem;
+    line-height: 1.6;
     margin-bottom: 2rem;
 }
 
+.home-img {
+    margin: 2rem 0;
+}
+
+.home-img img {
+    width: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.05);
+}
 
 footer {
     background: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 .footer-content {
@@ -94,6 +133,7 @@ footer {
     background: #222;
     padding: 10px 0;
     margin-top: 20px;
+    font-size: 1rem;
 }
 
 /* Estilo da barra de rolagem */
@@ -103,13 +143,11 @@ footer {
 
 ::-webkit-scrollbar-track {
     background: #1a1a1a;
-    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 10px;
-    border: 2px solid #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -118,16 +156,17 @@ footer {
 
 /* Media Queries para responsividade */
 @media (max-width: 1000px) {
-    header {
-        padding: 1rem 5%;
+    section {
+        padding: 5rem 5%;
     }
 
     .logo img {
-        width: 120px; /* Ajuste conforme necessário */
+        width: 120px;
     }
 
     nav a {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        margin-left: 1rem;
     }
 }
 
@@ -136,46 +175,96 @@ footer {
         padding: 1rem 2%;
     }
 
-    .logo img {
-        width: 100px; /* Ajuste conforme necessário */
+    .logo {
+        font-size: 2.5rem;
     }
 
     nav a {
         font-size: 1.4rem;
+        margin-left: 1rem;
     }
 
     section {
-        padding: 4rem 5%;
+        padding: 4rem 4%;
+    }
+
+    .home-img img {
+        width: 150px;
     }
 
     h1 {
-        font-size: 3.5rem;
+        font-size: 4rem;
+        padding-top: 2rem; /* Aumentado para dispositivos móveis */
+    }
+
+    .description {
+        font-size: 1.6rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (max-width: 480px) {
     header {
-        padding: 1rem 1%;
+        padding: 1rem 3%;
     }
 
-    .logo img {
-        width: 80px; /* Ajuste conforme necessário */
+    .logo {
+        font-size: 2rem;
     }
 
     nav a {
         font-size: 1.2rem;
-        margin-left: 0.5rem;
     }
 
     section {
-        padding: 3rem 2%;
+        padding: 2rem 5%;
+    }
+
+    .home-img img {
+        width: 100px;
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+        padding-top: 2rem; /* Aumentado para dispositivos móveis */
     }
 
-    footer {
-        padding: 15px 0;
+    .description {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 1.5rem 5%;
+    }
+
+    h1 {
+        font-size: 3rem;
+        padding-top: 1rem; /* Ajustado para dispositivos móveis */
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .home-img img {
+        width: 80px;
     }
 }

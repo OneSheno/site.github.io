@@ -105,7 +105,7 @@ section {
 
 .home .home-content h1 {
     font-size: 5.5rem;
-    font-weight: 700;
+    font-weight:00;
     line-height: 1.3;
     color: #f05454; /* Alterado para manter a cor original */
 }
@@ -113,7 +113,7 @@ section {
 .home-content {
     max-width: 800px;
     background: #1e1e1e;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
@@ -328,4 +328,23 @@ footer .footer-bottom {
     height: 100%;
     border-left: 3px solid #b74b4b;
     animation: cursor 0.6s infinite;
+}
+/* Estilos do botão */
+.meu-botao {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.meu-botao:hover {
+    background-color: #45a049;
 }

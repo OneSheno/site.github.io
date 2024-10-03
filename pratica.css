@@ -268,3 +268,56 @@ footer {
         width: 80px;
     }
 }
+#leaderboard {
+    padding: 5rem 9%;
+    background: #1a1a1a; /* Cor de fundo para diferenciar a seção */
+    color: white;
+    text-align: center;
+}
+
+.leaderboard-container {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.leaderboard {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 1rem;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+.leaderboard th {
+    background: #b74b4b;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.leaderboard tr:nth-child(even) {
+    background: #333;
+}
+
+.leaderboard tr:hover {
+    background: #444;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .leaderboard th, .leaderboard td {
+        padding: 0.8rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .leaderboard th, .leaderboard td {
+        padding: 0.6rem;
+        font-size: 1.2rem;
+    }
+}

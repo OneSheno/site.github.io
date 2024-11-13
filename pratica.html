@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="pratica.css">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script> <!-- Biblioteca de confete -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Biblioteca de confete -->
     <title>Prática dos 5S</title>
 </head>
+
 <body>
     <header>
-        <a href="#" class="logo"><img src="https://cdn.discordapp.com/attachments/1144982967127654501/1289970737502748744/image.png?ex=66ff5f9e&is=66fe0e1e&hm=a7a8a890558dfd883968e0c5ddabb910f8c8694a11036b908c8ccba4db51fb91&" alt="Logo"></a>
+        <a href="#" class="logo"><img
+                src="https://cdn.discordapp.com/attachments/1144982967127654501/1305677807933980693/image.png?ex=6733e6b7&is=67329537&hm=f63c03f05f046b69e0dd5fda515a828d10895093d3ef5c45a0acb0a44b9b9d2e&"
+                alt="Logo"></a>
         <nav>
             <a href="index.html">Início</a>
             <a href="o que é.html">O que é?</a>
@@ -22,17 +27,29 @@
     <section id="pratica">
         <main></main>
         <div style="margin-top: 4rem;"></div>
-        <h1>Prática dos 5S</h1>
-        <p class="description">Após a realização de todas as etapas, realizaremos um jogo onde a sala que conseguir aplicar os 5S da melhor forma ganhará uma pequena recompensa.</p>
-        <p class="description">Para participar é muito simples: basta enviar uma foto do espaço sujo e, logo em seguida, limpo para o seguinte número: (75) 98811-0331 e pronto! Agora é só aguardar o resultado e, caso sua sala ganhe, avisaremos via WhatsApp através da pessoa que enviou as fotos.</p>
-        <p class="description">A sala vencedora terá sua foto aqui!<p>
-        <div class="home-img">
-            <img id="target-image" src="https://cdn.discordapp.com/attachments/1144982967127654501/1290681914704924712/580ee77bb082812160f2e11558dd2538-removebg.png?ex=66ff52f4&is=66fe0174&hm=a9176e65289f350d6e728d248e7064a809945989277c1bc58adc0d3f391da298&" alt="Imagem ilustrativa" onclick="fireConfetti()">
+        <h1>ORDER UP!</h1>
+        <p class="description">Agora é a hora de testar o nosso jogo.</p>
+        <p class="description">Order Up! é um jogo com mecânica muito simples: o jogador escolhe entre dois personagens
+            diferentes para controlar e deve adquirir a maior pontuação, que consiste em pegar o máximo de bolinhas de
+            papel. O jogo se enquadra no estilo "casual", com uma perspectiva de cima para baixo. O aluno que alcançar
+            160 pontos ou mais ganhará um pequeno brinde, e aqueles com as maiores pontuações aparecerão no leaderboard.
+        </p>
+
+        <div class="image-container">
+            <a href="https://www.youtube.com/watch?v=DWVaX-_6ijo&ab_channel=DiasDiversos" target="_blank">
+                <img src="https://cdn.discordapp.com/attachments/1144982967127654501/1306039545812353104/pngwing.com.png?ex=6735379c&is=6733e61c&hm=e74c153ccf5b8dcd1ec522dba24c99f83d4eecb046b26186c4dbee4f0343653f&"
+                    alt="Imagem 1" class="image">
+            </a>
+            <a href="https://gx.games/games/pzj5sg/order-up-/tracks/25f41cb5-80db-4c33-9619-9d1f414ebdcb/"
+                target="_blank">
+                <img src="https://cdn.discordapp.com/attachments/1144982967127654501/1306038386859184159/image-removebg-preview.png?ex=67353688&is=6733e508&hm=b1daf83f6262abbd9a393441955259e2ed55c0072e52bc247449c61b9a0f3995&"
+                    alt="Imagem 2" class="image">
+            </a>
         </div>
     </section>
 
     <section id="leaderboard">
-        <h1>Leaderboard - Salas Participantes</h1>
+        <h1>Leaderboard - Participantes</h1>
         <div class="leaderboard-container">
             <table class="leaderboard">
                 <thead>
@@ -45,8 +62,8 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Sala A</td>
-                        <td>0 pontos</td>
+                        <td>Henrique</td>
+                        <td>180 pontos</td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -72,7 +89,9 @@
         <div class="footer-content">
             <div class="footer-section about">
                 <h2>Sobre Nós</h2>
-                <p>Nós somos um grupo de estudantes do ensino médio, unidos pelo desafio de concluir nosso Trabalho de Conclusão de Curso (TCC), onde nossa missão é desenvolver um site sobre os 5S, uma metodologia que promove a organização e a eficiência em ambientes de trabalho e estudo.</p>
+                <p>Nós somos um grupo de estudantes do ensino médio, unidos pelo desafio de concluir nosso Trabalho de
+                    Conclusão de Curso (TCC), onde nossa missão é desenvolver um site sobre os 5S, uma metodologia que
+                    promove a organização e a eficiência em ambientes de trabalho e estudo.</p>
             </div>
             <div class="footer-section contact">
                 <h2>Contato</h2>
@@ -86,14 +105,6 @@
     </footer>
 
     <script src="pratica.js"></script>
-    <script>
-        function fireConfetti() {
-            confetti({
-                particleCount: 100,
-                spread: 70,
-                origin: { y: 0.6 }
-            });
-        }
-    </script>
 </body>
+
 </html>

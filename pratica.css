@@ -82,9 +82,10 @@ section {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 10rem;
     margin-bottom: 2rem;
-    padding-top: 1rem; /* Adicionado para descer o h1 */
+    padding-top: 1rem;
+    /* Adicionado para descer o h1 */
 }
 
 .description {
@@ -194,7 +195,8 @@ footer {
 
     h1 {
         font-size: 4rem;
-        padding-top: 2rem; /* Aumentado para dispositivos móveis */
+        padding-top: 2rem;
+        /* Aumentado para dispositivos móveis */
     }
 
     .description {
@@ -230,7 +232,8 @@ footer {
 
     h1 {
         font-size: 3.5rem;
-        padding-top: 2rem; /* Aumentado para dispositivos móveis */
+        padding-top: 2rem;
+        /* Aumentado para dispositivos móveis */
     }
 
     .description {
@@ -257,7 +260,8 @@ footer {
 
     h1 {
         font-size: 3rem;
-        padding-top: 1rem; /* Ajustado para dispositivos móveis */
+        padding-top: 1rem;
+        /* Ajustado para dispositivos móveis */
     }
 
     .description {
@@ -268,9 +272,11 @@ footer {
         width: 80px;
     }
 }
+
 #leaderboard {
     padding: 5rem 9%;
-    background: #1a1a1a; /* Cor de fundo para diferenciar a seção */
+    background: #1a1a1a;
+    /* Cor de fundo para diferenciar a seção */
     color: white;
     text-align: center;
 }
@@ -287,7 +293,8 @@ footer {
     border-collapse: collapse;
 }
 
-.leaderboard th, .leaderboard td {
+.leaderboard th,
+.leaderboard td {
     padding: 1rem;
     border: 1px solid #444;
     text-align: center;
@@ -309,16 +316,25 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .leaderboard th, .leaderboard td {
+
+    .leaderboard th,
+    .leaderboard td {
         padding: 0.8rem;
         font-size: 1.4rem;
     }
 }
 
 @media (max-width: 480px) {
-    .leaderboard th, .leaderboard td {
+
+    .leaderboard th,
+    .leaderboard td {
         padding: 0.6rem;
         font-size: 1.2rem;
     }
 }
 
+h1 {
+    color: #b74b4b;
+    font-family: Arial, sans-serif;
+    /* Substitua por outra fonte, se preferir */
+}
